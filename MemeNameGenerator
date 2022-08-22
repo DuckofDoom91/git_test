@@ -1,0 +1,23 @@
+import sys
+import random
+
+print("We all know Bumblebee CabbagePatch, but what's his REAL name?\n")
+
+first = ("Bumblebee", "Briarpatch", "Butterscotch", "Buffalo", "Bendyknees", "Bubblebath",
+         "Beautyqueen", "Blastoise", "Beehive", "Beautimous", "Beheaded", "Bornholm",
+         "Barbituate", "Breastplate", "Brokentoe", "BarginShop", "Bringhome", "Bufferrate")
+         
+last = ("CabbagePatch", "Colorectal", "Creamsicle", "Cucumberpatch", "Careerpath", "Crumblecake",
+        "Clementine", "Cleverbot", "Cleaverface", "Chuggingrace", "Carhornblare", "Catchrelease",
+        "Cluckington", "Clevergirl", "Calamine", "Camelpox", "Calcium", "Cankersore")
+
+while True:
+    first_name = random.choice(first)
+    last_name = random.choice(last)
+
+    print("{} {}".format(first_name, last_name), file=sys.stderr)
+
+    try_again = input("\n\nTry Again? (Press Enter, else q to quit)\n")
+    if try_again.lower() == "q":
+        break
+        input("\nPress Enter To Exit")
